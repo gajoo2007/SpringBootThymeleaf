@@ -1,0 +1,45 @@
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Employee Details</title>
+</head>
+<body>  
+        <form action="/display" method="post">  
+        	<h2>Employee Details Forms</h2>
+            <table>  
+                <tr>  
+                    <td><label for="First Name">First Name </label></td>  
+                    <td><input type="text" name="firstName"></input></td>
+                    
+                    <!-- <td><input type="text" th:field="*{firstName}"></input></td>
+                    <td th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">Name Error</td>  
+                    -->
+                </tr>
+                
+                <tr>  
+                    <td><label for="Last Name">Last Name </label></td>  
+                    <td><input type="text" name="lastName"></input></td>  
+                </tr>
+                
+                <tr>
+	                <!-- <select th:field="*{department}">
+	    				<option th:value="'IT'" th:text="IT"></option>
+	    				<option th:value="'HR'" th:text="HR"></option>
+					</select> 
+					-->
+					<td><label for="Department">Department </label></td>
+					<td><select id="department" name="department">
+    					<option value="IT">IT</option>
+    					<option value="HR">HR</option>
+					</select></td>
+					
+				</tr>
+                
+                <tr>  
+                    <td></td>  
+                    <td><input type="submit" value="Submit"></input>&nbsp;&nbsp;<input type="reset" value="Reset"></input></td>
+                </tr>  
+            </table>  
+        </form>  
+    </body>  
+</html>
